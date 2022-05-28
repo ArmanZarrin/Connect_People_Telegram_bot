@@ -15,6 +15,9 @@ markup.add(itembtn1, itembtn2, itembtn3)
 
 
 class Bot:
+    """
+    Template code for Telegram bot
+    """
     def __init__(self):
         self.bot = telebot.TeleBot(os.environ['MyToken']) # You can set parse_mode by default. HTML or MARKDOWN
         self.send_welcome=self.bot.message_handler(commands=['start', 'help'])(self.send_welcome)
